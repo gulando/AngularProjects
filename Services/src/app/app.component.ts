@@ -1,6 +1,8 @@
+/*
 import { Component, OnInit} from '@angular/core';
 import {DataService}        from './data.service';
 import {Phone}              from './phone';
+import {LogService}         from "./log.service";
 
 
 @Component({
@@ -38,7 +40,7 @@ import {Phone}              from './phone';
             </tbody>
         </table>
     </div>`,
-    providers: [DataService]
+    providers: [DataService, LogService]
 })
 
 export class AppComponent implements OnInit {
@@ -56,3 +58,13 @@ export class AppComponent implements OnInit {
         this.items = this.dataService.getData();
     }
 }
+*/
+
+import { Component} from '@angular/core';
+
+@Component({
+    selector: 'my-app',
+    template: `<data-comp></data-comp>
+               <data-comp></data-comp>`
+})
+export class AppComponent {}
